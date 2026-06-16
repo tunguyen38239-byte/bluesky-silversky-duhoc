@@ -1,0 +1,2660 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BlueSky Travel & SilverSky | Vé máy bay cho Du học & XKLĐ</title>
+  <meta name="description" content="Giải pháp vé máy bay cho công ty du học, xuất khẩu lao động, trung tâm đào tạo ngoại ngữ và đơn vị phái cử lao động quốc tế.">
+  <link rel="preload" as="image" href="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616110615708_0hnmapflauivf_1200.webp">
+  <style>
+    :root {
+      --navy: #102a43;
+      --blue: #1f7ae0;
+      --teal: #0f9f9a;
+      --green: #2f8f5b;
+      --gold: #f2b84b;
+      --red: #d85645;
+      --ink: #17212b;
+      --muted: #607080;
+      --line: #dce6ef;
+      --paper: #ffffff;
+      --soft: #f9fafb;
+      --mist: #eaf6f3;
+      --shadow: 0 18px 48px rgba(16, 42, 67, 0.14);
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--paper);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: none;
+    }
+
+    .social-sidebar {
+      position: fixed;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 40;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      padding: 20px 10px;
+    }
+
+    .social-sidebar a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transition: color 0.2s;
+    }
+
+    .social-sidebar a:hover {
+      color: #ffffff;
+    }
+
+    .social-sidebar svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+      stroke: none;
+    }
+
+    .social-sidebar .dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 30;
+      padding: 14px 24px;
+      background: transparent;
+      transition: transform 0.35s ease;
+    }
+
+    .nav {
+      position: relative;
+      max-width: var(--max);
+      margin: 0 auto;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 0 14px 0 24px;
+      background: rgba(15, 23, 42, 0.35);
+      backdrop-filter: blur(20px) saturate(1.8);
+      -webkit-backdrop-filter: blur(20px) saturate(1.8);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 999px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+    }
+
+    .nav::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 999px;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .brand img {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 14.5px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    .links a {
+      padding: 8px 16px;
+      border-radius: 999px;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .links a:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .menu {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+    }
+
+    .menu span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin: 4px auto;
+      border-radius: 4px;
+      background: #ffffff;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .menu.open span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .menu.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu.open span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-weight: 800;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .nav .btn {
+      min-height: 42px;
+      padding: 0 26px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-primary {
+      color: #ffffff;
+      background: #3b5bff;
+      box-shadow: 0 4px 18px rgba(59, 91, 255, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: #2d4de6;
+      box-shadow: 0 6px 24px rgba(59, 91, 255, 0.45);
+    }
+
+    .btn-secondary {
+      color: var(--navy);
+      background: #ffffff;
+      border-color: var(--line);
+    }
+
+    .hero {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: grid;
+      align-items: center;
+      color: #ffffff;
+      background:
+        linear-gradient(90deg, rgba(9, 31, 52, 0.85), rgba(9, 31, 52, 0.6) 50%, rgba(9, 31, 52, 0.15)),
+        url("https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616110615708_0hnmapflauivf_1200.webp") center / cover;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      padding: 86px 0 40px;
+      text-shadow: 0 2px 16px rgba(0, 20, 60, 0.5);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 7px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.12);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin: 22px 0 18px;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+
+    .hero p {
+      max-width: 690px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 28px 0 34px;
+    }
+
+    .hero .btn-secondary {
+      border-color: transparent;
+      background: rgba(255, 255, 255, 0.94);
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      max-width: 920px;
+    }
+
+    .metric {
+      position: relative;
+    }
+
+    .metric img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .section {
+      padding: 84px 0;
+    }
+
+    .section-intro {
+      background: var(--paper);
+    }
+
+    .section-soft {
+      background: var(--soft);
+    }
+
+    .section-mist {
+      background: var(--mist);
+    }
+
+    .section-blue {
+      background: linear-gradient(135deg, rgba(16, 42, 67, 0.25), rgba(31, 122, 224, 0.2)),
+        url("https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616110625544_0hnmapflauivi_1200.webp") center / cover no-repeat;
+    }
+
+    .section-blue .kicker {
+      color: #ffffff;
+      border-bottom-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .section-blue h2 {
+      color: #ffffff;
+    }
+
+    .section-blue .lead {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 38px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .kicker {
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--blue);
+      display: inline-block;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      color: var(--blue);
+      font-size: clamp(22px, 2.5vw, 30px);
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .intro-grid h2 {
+      font-size: clamp(24px, 2.8vw, 32px);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+
+    .intro-copy {
+      color: #314255;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .advantage-grid,
+    .policy-grid,
+    .product-grid,
+    .support-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .advantage-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 44px;
+    }
+
+    .advantage-grid .card {
+      position: relative;
+      overflow: hidden;
+      color: #ffffff;
+    }
+
+    .advantage-grid .card::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      opacity: 0.15;
+      right: -30px;
+      bottom: -30px;
+      background: rgba(255, 255, 255, 0.4);
+      filter: blur(25px);
+    }
+
+    .advantage-grid .card::after {
+      content: "";
+      position: absolute;
+      right: -5px;
+      bottom: -5px;
+      width: 70px;
+      height: 70px;
+      opacity: 0.18;
+      background: no-repeat center / contain;
+    }
+
+    .advantage-grid .card:nth-child(1)::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cellipse cx='50' cy='72' rx='30' ry='8' fill='white' opacity='0.4'/%3E%3Crect x='28' y='25' width='44' height='48' rx='8' fill='white'/%3E%3Crect x='34' y='20' width='32' height='10' rx='5' fill='white' opacity='0.7'/%3E%3Ccircle cx='50' cy='45' r='12' fill='rgba(0,0,0,0.15)'/%3E%3Cpath d='M50 37v16M55 41h-7a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-7' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Crect x='36' y='62' width='28' height='3' rx='1.5' fill='rgba(0,0,0,0.1)'/%3E%3C/svg%3E");
+    }
+
+    .advantage-grid .card:nth-child(2)::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='35' cy='30' r='12' fill='white'/%3E%3Cellipse cx='35' cy='58' rx='18' ry='14' fill='white'/%3E%3Ccircle cx='68' cy='35' r='10' fill='white' opacity='0.7'/%3E%3Cellipse cx='68' cy='58' rx='15' ry='12' fill='white' opacity='0.7'/%3E%3Ccircle cx='52' cy='22' r='8' fill='white' opacity='0.5'/%3E%3Cellipse cx='52' cy='52' rx='12' ry='10' fill='white' opacity='0.5'/%3E%3Crect x='20' y='75' width='60' height='4' rx='2' fill='white' opacity='0.3'/%3E%3C/svg%3E");
+    }
+
+    .advantage-grid .card:nth-child(3)::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cellipse cx='50' cy='80' rx='28' ry='6' fill='white' opacity='0.3'/%3E%3Cpath d='M50 15 C52 15 55 17 55 20 L55 45 L75 58 L75 62 L55 52 L55 70 L62 74 L62 77 L50 73 L38 77 L38 74 L45 70 L45 52 L25 62 L25 58 L45 45 L45 20 C45 17 48 15 50 15Z' fill='white'/%3E%3C/svg%3E");
+    }
+
+    .advantage-grid .card {
+      background: linear-gradient(135deg, #4d9df7 0%, #1a6dd4 100%);
+    }
+
+    .advantage-grid .card h3 { color: #ffffff; }
+    .advantage-grid .card p { color: rgba(255, 255, 255, 0.85); }
+    .advantage-grid .card .icon {
+      background: rgba(255, 255, 255, 0.2) !important;
+    }
+
+
+    .policy-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .product-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .support-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card,
+    .policy-card,
+    .product-card,
+    .support-card {
+      border: none;
+      border-radius: 22px;
+      background: #ffffff;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .card {
+      padding: 18px 18px;
+    }
+
+    .policy-card,
+    .support-card {
+      padding: 22px;
+    }
+
+    .icon {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      color: #ffffff;
+      background: var(--teal);
+    }
+
+    .icon svg {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .card h3,
+    .policy-card h3,
+    .product-card h3,
+    .support-card h3 {
+      margin-bottom: 6px;
+      color: var(--blue);
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    .card p,
+    .policy-card p,
+    .support-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .ops-panel {
+      padding: 32px 28px;
+      border: none;
+      border-radius: 22px;
+      background: #ffffff;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    .ops-head {
+      margin-bottom: 28px;
+    }
+
+    .ops-head b {
+      display: block;
+      color: var(--blue);
+      font-size: 20px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .ops-head span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 15px;
+      font-style: italic;
+    }
+
+    .ops-steps {
+      display: grid;
+      gap: 0;
+    }
+
+    .ops-step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      position: relative;
+      padding-bottom: 28px;
+    }
+
+    .ops-step:last-child {
+      padding-bottom: 0;
+    }
+
+    .ops-step::before {
+      content: "";
+      position: absolute;
+      left: 23px;
+      top: 48px;
+      bottom: 0;
+      width: 2px;
+      background: var(--line);
+    }
+
+    .ops-step:last-child::before {
+      display: none;
+    }
+
+    .ops-num {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 900;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ops-step:nth-child(2) .ops-num { background: var(--teal); }
+    .ops-step:nth-child(3) .ops-num { background: var(--green); }
+    .ops-step:nth-child(4) .ops-num { background: var(--gold); }
+
+    .ops-body {
+      padding-top: 4px;
+    }
+
+    .ops-body b {
+      display: block;
+      color: var(--navy);
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .ops-body span {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .market-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 28px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    .market {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .market-window {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 5 / 6;
+      overflow: hidden;
+    }
+
+    .market-scene {
+      position: absolute;
+      inset: 16%;
+      border-radius: 36% 36% 34% 34% / 28% 28% 26% 26%;
+      overflow: hidden;
+      background: #dbeafe;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease;
+    }
+
+    .market:hover .market-scene {
+      transform: scale(1.08);
+    }
+
+    .market-scene.scene-japan {
+      background-image: url('https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105440628_0hnmapflauit7_orig.webp');
+    }
+
+    .market-scene.scene-korea {
+      background-image: url('https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105446260_0hnmapflauitc_orig.webp');
+    }
+
+    .market-scene.scene-taiwan {
+      background-image: url('https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105421616_0hnmapflauit2_orig.webp');
+    }
+
+    .market-scene.scene-europe {
+      background-image: url('https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105441368_0hnmapflauit8_orig.webp');
+    }
+
+    .market-frame {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .market-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+
+    .market-label {
+      position: absolute;
+      inset: 16%;
+      border-radius: 36% 36% 34% 34% / 28% 28% 26% 26%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 6px;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(1px);
+      -webkit-backdrop-filter: blur(1px);
+      color: var(--navy);
+      z-index: 3;
+      transition: background 0.3s ease;
+      text-align: center;
+    }
+
+    .market-label b {
+      display: block;
+      font-size: 11px;
+      line-height: 1.2;
+      color: #fff;
+    }
+
+    .market-label span {
+      display: block;
+      margin-top: 1px;
+      font-size: 8px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: #fff;
+    }
+
+    .tabs {
+      display: inline-flex;
+      align-items: flex-end;
+      gap: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+      position: relative;
+    }
+    .tabs-wrap {
+      position: relative;
+      margin-bottom: 24px;
+    }
+    .tabs-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--blue);
+    }
+
+    .tab-btn {
+      position: relative;
+      min-height: 50px;
+      padding: 0 36px;
+      border: none;
+      background: transparent;
+      color: #888d96;
+      font-weight: 800;
+      font-size: .95rem;
+      cursor: pointer;
+      z-index: 1;
+      margin: 0 -6px;
+      transition: color .2s;
+    }
+    .tab-btn:first-child { margin-left: 0; }
+    .tab-btn:nth-child(1) { z-index: 4; }
+    .tab-btn:nth-child(2) { z-index: 3; }
+    .tab-btn:nth-child(3) { z-index: 2; }
+    .tab-btn:nth-child(4) { z-index: 1; }
+    .tab-btn.active { z-index: 5 !important; }
+
+    .tab-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: #eaecf0;
+      border-radius: 10px 10px 0 0;
+      transform: perspective(5px) rotateX(1deg);
+      transform-origin: bottom;
+      z-index: -1;
+      box-shadow:
+        2px -1px 3px rgba(0,0,0,.07),
+        4px 0 8px -2px rgba(0,0,0,.10);
+      transition: background .2s, box-shadow .2s;
+    }
+    .tab-btn:hover::before {
+      background: #dde0e6;
+    }
+    .tab-btn.active {
+      color: #ffffff;
+    }
+    .tab-btn.active::before {
+      background: var(--blue);
+      box-shadow:
+        3px -1px 4px rgba(0,0,0,.10),
+        5px 0 10px -2px rgba(0,0,0,.15);
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    .xkld-card {
+      padding: 28px 32px;
+    }
+
+    .xkld-card h3 {
+      margin-bottom: 6px;
+    }
+
+    .xkld-sub {
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .xkld-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .xkld-item {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border-radius: 18px;
+      border: none;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      transition: transform .3s cubic-bezier(.4,0,.2,1), box-shadow .3s cubic-bezier(.4,0,.2,1);
+    }
+    .xkld-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.13);
+    }
+    .xkld-item {
+      will-change: transform;
+    }
+    .xkld-thumb {
+      position: relative;
+      width: 100%;
+      height: 210px;
+      overflow: hidden;
+    }
+    .xkld-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s cubic-bezier(.4,0,.2,1);
+    }
+    .xkld-item:hover .xkld-thumb img {
+      transform: scale(1.06);
+    }
+    .xkld-info {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px 20px 22px;
+    }
+    .xkld-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,.10);
+    }
+    .xkld-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #fff;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .xkld-icon.ic-blue   { background: var(--blue); }
+    .xkld-icon.ic-teal   { background: #0ea5a0; }
+    .xkld-icon.ic-orange { background: #f59e0b; }
+    .xkld-icon.ic-purple { background: #8b5cf6; }
+    .xkld-icon.ic-green  { background: var(--green); }
+    .xkld-icon.ic-navy   { background: var(--navy); }
+    .xkld-item span {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.45;
+      text-align: left;
+    }
+    .xkld-cta {
+      text-align: center;
+      margin-top: 28px;
+    }
+    .xkld-cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 36px;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background .2s, transform .2s, box-shadow .2s;
+      box-shadow: 0 4px 14px rgba(31,122,224,.25);
+    }
+    .xkld-cta a:hover {
+      background: var(--navy);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(31,122,224,.35);
+    }
+    .xkld-cta a svg {
+      width: 18px;
+      height: 18px;
+      stroke: #fff;
+      stroke-width: 2.5;
+      fill: none;
+    }
+
+    .product-card {
+      overflow: hidden;
+      border-radius: 16px;
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .product-head {
+      display: none;
+    }
+
+    .flight-card {
+      padding: 24px 28px;
+      border-bottom: 1px dashed #e5e7eb;
+    }
+
+    .flight-card:last-child {
+      border-bottom: none;
+    }
+
+    .flight-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 16px;
+    }
+
+    .flight-code {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--blue);
+    }
+
+    .flight-tag {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    .flight-tag.du-hoc {
+      color: var(--blue);
+      background: rgba(31, 122, 224, 0.1);
+    }
+
+    .flight-route {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .flight-point {
+      text-align: center;
+      min-width: 80px;
+    }
+
+    .flight-city {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .flight-sub {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .flight-line {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 12px;
+      position: relative;
+    }
+
+    .flight-line::before {
+      content: "";
+      width: 100%;
+      height: 0;
+      border-top: 2px dashed #d1d5db;
+      position: absolute;
+      top: 50%;
+    }
+
+    .flight-line .plane-icon {
+      position: relative;
+      z-index: 1;
+      width: 28px;
+      height: 28px;
+      color: var(--navy);
+    }
+
+    .flight-dot-left,
+    .flight-dot-right {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .flight-dot-left {
+      left: 0;
+      background: var(--teal);
+    }
+
+    .flight-dot-right {
+      right: 0;
+      background: var(--teal);
+    }
+
+    .flight-note {
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .product-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 18px;
+      padding: 22px;
+    }
+
+    .list-title {
+      margin-bottom: 10px;
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .duhoc-card {
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+
+    .duhoc-card-head {
+      padding: 28px 32px 0;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .duhoc-card-head .duhoc-plane {
+      width: 36px;
+      height: 36px;
+      background: var(--blue);
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .duhoc-card-head .duhoc-plane svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .duhoc-card-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--blue);
+      line-height: 1.2;
+    }
+
+    .duhoc-features {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      padding: 24px 32px;
+    }
+
+    .duhoc-feat {
+      background: #fff;
+      border-radius: 16px;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+    }
+
+    .duhoc-feat:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    }
+
+    .duhoc-feat-hero {
+      width: 100%;
+      height: 130px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .duhoc-feat-hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(.4,0,.2,1);
+    }
+
+    .duhoc-feat:hover .duhoc-feat-hero img {
+      transform: scale(1.08);
+    }
+
+    .duhoc-feat-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.3) 40%, transparent 100%);
+      z-index: 1;
+    }
+
+    .duhoc-feat-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+      transition: transform 0.3s;
+    }
+
+    .duhoc-feat:hover .duhoc-feat-icon {
+      transform: scale(1.1);
+    }
+
+    .duhoc-feat-icon svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .duhoc-feat-label {
+      width: 100%;
+      padding: 14px 12px 18px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.45;
+      text-align: center;
+    }
+
+    .duhoc-feat--blue .duhoc-feat-icon { background: linear-gradient(135deg, #3b5bff, #2d4de6); box-shadow: 0 6px 20px rgba(59,91,255,0.4); }
+    .duhoc-feat--teal .duhoc-feat-icon { background: linear-gradient(135deg, #0ea5a0, #0d8f8b); box-shadow: 0 6px 20px rgba(14,165,160,0.4); }
+    .duhoc-feat--gold .duhoc-feat-icon { background: linear-gradient(135deg, #e8930c, #d4850b); box-shadow: 0 6px 20px rgba(232,147,12,0.4); }
+    .duhoc-feat--purple .duhoc-feat-icon { background: linear-gradient(135deg, #7c3aed, #6d31d4); box-shadow: 0 6px 20px rgba(124,58,237,0.4); }
+    .duhoc-feat--green .duhoc-feat-icon { background: linear-gradient(135deg, #16a34a, #128a3e); box-shadow: 0 6px 20px rgba(22,163,74,0.4); }
+
+    .duhoc-cta {
+      text-align: center;
+      padding: 4px 32px 28px;
+    }
+
+    .duhoc-cta .btn {
+      padding: 0 32px;
+      border-radius: 999px;
+      font-size: 15px;
+      gap: 8px;
+    }
+
+    .duhoc-cta .btn svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+
+
+    .clean-list,
+    .check-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: #314255;
+    }
+
+    .clean-list li {
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: var(--soft);
+      font-weight: 700;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .check-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    .check-list li::after {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 10px;
+      width: 6px;
+      height: 3px;
+      border-left: 2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
+      transform: rotate(-45deg);
+    }
+
+    .cta {
+      color: #ffffff;
+      background-color: #091f34;
+      background-image:
+        linear-gradient(90deg, rgba(9, 31, 52, 0.93), rgba(31, 122, 224, 0.72)),
+        url("https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105501537_0hnmapflauitg_1200.webp");
+      background-position: center top;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .cta h2 {
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+
+    .cta p {
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 17px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .contact-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: #ffffff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .contact-item b {
+      display: block;
+      line-height: 1.2;
+    }
+
+    .contact-item span {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 14px;
+    }
+
+    .form {
+      padding: 28px;
+      border-radius: 8px;
+      background: #ffffff;
+      color: var(--ink);
+      box-shadow: var(--shadow);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      min-height: 46px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      background: #ffffff;
+      font: inherit;
+      font-size: 16px;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 112px;
+      padding-top: 12px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(31, 122, 224, 0.14);
+    }
+
+    .form-note {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer {
+      padding: 28px 0;
+      color: rgba(255, 255, 255, 0.9);
+      background: var(--blue);
+      font-size: 14px;
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Floating Contact Icons */
+    .floating-contact {
+      position: fixed;
+      right: 20px;
+      bottom: 100px;
+      z-index: 40;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .fc-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #ffffff;
+      color: var(--blue);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .fc-btn:hover {
+      transform: scale(1.12);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .fc-btn svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: var(--blue);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .fc-zalo-text {
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--blue);
+    }
+
+    @media (max-width: 720px) {
+      .floating-contact {
+        right: 10px;
+        bottom: 62px;
+        gap: 8px;
+      }
+
+      .fc-btn {
+        width: 38px;
+        height: 38px;
+      }
+
+      .fc-btn svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .fc-zalo-text {
+        font-size: 10px;
+      }
+    }
+
+    .back-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 35;
+      width: 44px;
+      height: 44px;
+      border: 0;
+      border-radius: 8px;
+      color: #ffffff;
+      background: var(--navy);
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .back-top.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .back-top svg {
+      width: 22px;
+      height: 22px;
+      margin: auto;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .header.scrolled .nav {
+      background: rgba(15, 23, 42, 0.88);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .header.header-hidden {
+      transform: translateY(-100%);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-32px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(32px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .hero-content {
+      animation: heroIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    @keyframes heroIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card,
+    .policy-card,
+    .support-card {
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.4s ease;
+      will-change: transform;
+    }
+
+    .card:hover,
+    .policy-card:hover,
+    .support-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12), 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .policy-card.highlight {
+      background: linear-gradient(135deg, #eef4ff 0%, #f0f7ff 100%);
+      border: 2px solid var(--blue);
+      box-shadow: 0 8px 32px rgba(37, 99, 235, 0.12), 0 2px 8px rgba(37, 99, 235, 0.06);
+    }
+
+    .policy-card.highlight:hover {
+      transform: translateY(-8px) scale(1.03);
+      border-color: var(--teal);
+      background: linear-gradient(135deg, #e8f0fe 0%, #e3f1ff 100%);
+      box-shadow: 0 24px 60px rgba(37, 99, 235, 0.2), 0 8px 24px rgba(37, 99, 235, 0.1);
+    }
+
+    .policy-card .icon {
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .policy-card:hover .icon {
+      transform: scale(1.15) rotate(-5deg);
+    }
+
+    .policy-card h3 {
+      transition: color 0.3s ease;
+    }
+
+    .policy-card.highlight:hover h3 {
+      color: var(--teal);
+    }
+
+    .ops-panel {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .ops-panel:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .market-window {
+      transition: transform 0.35s ease;
+    }
+
+    .market:hover .market-window {
+      transform: scale(1.04);
+    }
+
+    .market:hover .market-label {
+      background: rgba(0,0,0,0.15);
+    }
+
+    .metric {
+      transition: transform 0.3s ease;
+    }
+
+    .metric:hover {
+      transform: translateY(-4px);
+    }
+
+    .tab-btn {
+      transition: color 0.2s;
+    }
+
+    .tab-btn:hover:not(.active) {
+      color: var(--navy);
+    }
+
+    .product-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(16, 42, 67, 0.12);
+    }
+
+    @media (max-width: 1040px) {
+      .nav {
+        overflow: visible;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .links {
+        position: absolute;
+        top: 68px;
+        left: 8px;
+        right: 8px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px 18px 18px;
+        background: rgba(12, 20, 35, 0.94);
+        backdrop-filter: blur(18px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+      }
+
+      .links.open {
+        display: flex;
+      }
+
+      .links a {
+        padding: 13px 14px;
+        border-radius: 12px;
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      .links a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+      }
+
+      .nav .btn {
+        display: none;
+      }
+
+      .section-head,
+      .intro-grid,
+      .cta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics,
+      .support-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .policy-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .product-body {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      html {
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: min(100% - 24px, var(--max));
+      }
+
+      .social-sidebar {
+        display: none;
+      }
+
+      .header {
+        padding: 8px 10px;
+      }
+
+      .nav {
+        height: 54px;
+        padding: 0 8px 0 14px;
+      }
+
+      .brand {
+        min-width: auto;
+      }
+
+      .brand img {
+        height: 28px;
+      }
+
+      .hero {
+        aspect-ratio: auto;
+        min-height: 100svh;
+        min-height: 100vh;
+      }
+
+      .hero-content {
+        padding: 76px 0 32px;
+      }
+
+      h1 {
+        font-size: 26px;
+        margin: 16px 0 14px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .eyebrow {
+        font-size: 11px;
+        padding: 5px 8px;
+      }
+
+      .hero-actions {
+        flex-direction: row;
+        margin: 20px 0 28px;
+        gap: 10px;
+      }
+
+      .hero-actions .btn {
+        flex: 1;
+        min-height: 42px;
+        padding: 0 14px;
+        font-size: 14px;
+        justify-content: center;
+      }
+
+      .section {
+        padding: 36px 0;
+      }
+
+      .kicker {
+        font-size: 12px;
+      }
+
+      .lead {
+        font-size: 15px;
+      }
+
+      .metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .intro-grid {
+        gap: 24px;
+      }
+
+      .intro-copy {
+        font-size: 14px;
+      }
+
+      .advantage-grid,
+      .product-grid,
+      .support-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .policy-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .advantage-grid {
+        margin-top: 24px;
+      }
+
+      .card {
+        padding: 18px;
+      }
+
+      .card h3 {
+        font-size: 15px;
+      }
+
+      .card p {
+        font-size: 12.5px;
+      }
+
+      .policy-card {
+        padding: 16px;
+      }
+
+      .policy-card h3 {
+        font-size: 14px;
+      }
+
+      .policy-card p {
+        font-size: 12px;
+      }
+
+      .ops-panel {
+        padding: 22px 18px;
+      }
+
+      .ops-head b {
+        font-size: 17px;
+      }
+
+      .ops-head span {
+        font-size: 13px;
+      }
+
+      .ops-step {
+        grid-template-columns: 36px 1fr;
+        gap: 12px;
+        padding-bottom: 22px;
+      }
+
+      .ops-num {
+        width: 36px;
+        height: 36px;
+        font-size: 15px;
+      }
+
+      .ops-step::before {
+        left: 17px;
+        top: 36px;
+      }
+
+      .ops-body b {
+        font-size: 15px;
+      }
+
+      .ops-body span {
+        font-size: 13px;
+      }
+
+      .market-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 20px;
+        padding-top: 20px;
+      }
+
+      .market-label b {
+        font-size: 10px;
+      }
+
+      .market-label span {
+        font-size: 7px;
+      }
+
+      .tabs-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        margin-left: -12px;
+        margin-right: -12px;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .tabs-wrap::-webkit-scrollbar {
+        display: none;
+      }
+
+      .tabs {
+        min-width: max-content;
+      }
+
+      .tab-btn {
+        padding: 0 18px;
+        font-size: .8rem;
+        min-height: 42px;
+      }
+
+      .flight-card {
+        padding: 16px 14px;
+      }
+
+      .flight-code {
+        font-size: 16px;
+      }
+
+      .flight-city {
+        font-size: 15px;
+      }
+
+      .flight-point {
+        min-width: 60px;
+      }
+
+      .flight-sub {
+        font-size: 10px;
+      }
+
+      .flight-tag {
+        font-size: 10px;
+        padding: 2px 8px;
+      }
+
+      .duhoc-card-head {
+        padding: 20px 18px 0;
+        gap: 10px;
+      }
+
+      .duhoc-card-head .duhoc-plane {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+      }
+
+      .duhoc-card-head .duhoc-plane svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .duhoc-card-title {
+        font-size: 17px;
+      }
+
+      .duhoc-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 18px 18px;
+      }
+
+      .duhoc-feat-hero {
+        height: 90px;
+      }
+
+      .duhoc-feat-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+      }
+
+      .duhoc-feat-icon svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .duhoc-feat-label {
+        font-size: 11.5px;
+        padding: 10px 8px 14px;
+      }
+
+      .duhoc-cta {
+        padding: 4px 18px 22px;
+      }
+
+      .xkld-card {
+        padding: 20px 16px;
+      }
+
+      .xkld-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+      .xkld-thumb {
+        height: 130px;
+      }
+      .xkld-info {
+        gap: 10px;
+        padding: 12px 12px 14px;
+      }
+      .xkld-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+      }
+      .xkld-icon svg {
+        width: 16px;
+        height: 16px;
+      }
+      .xkld-item span {
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      .contact-item span {
+        font-size: 12px;
+        word-break: break-word;
+      }
+
+      .cta {
+        background-size: 100% 50%;
+      }
+
+      .cta-grid {
+        gap: 28px;
+      }
+
+      .form {
+        padding: 20px 16px;
+      }
+
+      .form-grid {
+        gap: 12px;
+      }
+
+      .footer-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        font-size: 12px;
+      }
+
+      .floating-contact {
+        right: 10px;
+        bottom: 62px;
+        gap: 8px;
+      }
+
+      .fc-btn {
+        width: 38px;
+        height: 38px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+      }
+
+      .fc-btn svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .fc-zalo-text {
+        font-size: 10px;
+      }
+
+      .back-top {
+        width: 38px;
+        height: 38px;
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      h1 {
+        font-size: 22px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .flight-route {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .flight-line {
+        min-width: 80px;
+      }
+
+      .nav {
+        height: 50px;
+        padding: 0 6px 0 12px;
+      }
+
+      .brand img {
+        height: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"></div>
+
+  <div class="social-sidebar">
+    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>instagram</a>
+    <span class="dot"></span>
+    <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>twitter</a>
+    <span class="dot"></span>
+    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>facebook</a>
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="SilverSky — Signature Journey">
+        <img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616110537741_0hnmapflauiv9_1200.webp" alt="BlueSky & SilverSky" width="1494" height="779" decoding="async">
+      </a>
+
+      <nav class="links" id="navLinks" aria-label="Điều hướng chính">
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#chinh-sach">Chính sách</a>
+        <a href="#du-hoc">Du học</a>
+        <a href="#xkld">XKLĐ</a>
+        <a href="#lien-he">Liên hệ</a>
+      </nav>
+
+      <a class="btn btn-primary" href="#lien-he">Đăng ký đối tác</a>
+      <button class="menu" id="menuToggle" type="button" aria-label="Mở menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-label="Giải pháp vé máy bay cho Du học và XKLĐ">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Đối tác hàng không cho Du học & XKLĐ</div>
+          <h1>Giải pháp vé máy bay cho công ty Du học & Xuất khẩu lao động</h1>
+          <p>
+            BlueSky Travel và SilverSky cung cấp nguồn vé ổn định, giá cạnh tranh và đội ngũ hỗ trợ chuyên trách cho học viên, thực tập sinh và lao động xuất cảnh.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#chinh-sach">Xem chính sách</a>
+            <a class="btn btn-secondary" href="#contactForm">Nhận báo giá ưu đãi</a>
+          </div>
+          <div class="metrics" aria-label="Lợi thế nổi bật">
+            <div class="metric"><picture><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616110359568_0hnmapflauiut_1200.webp" alt="15 - 30 phút — Hỗ trợ báo giá nhanh" width="601" height="980" loading="eager"></picture></div>
+            <div class="metric"><picture><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616110418395_0hnmapflauiuu_1200.webp" alt="10+ khách — Chính sách đoàn" width="601" height="980" loading="eager"></picture></div>
+            <div class="metric"><picture><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616110723350_0hnmapflauivk_orig.webp" alt="24/7 — Trước và sau xuất cảnh" width="601" height="980" loading="eager"></picture></div>
+            <div class="metric"><picture><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616110725366_0hnmapflauivl_orig.webp" alt="4 thị trường — Nhật, Hàn, Đài Loan, Châu Âu" width="601" height="980" loading="eager"></picture></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-intro" id="gioi-thieu">
+      <div class="container intro-grid">
+        <div class="reveal-left">
+          <div class="kicker">Giới thiệu</div>
+          <h2>Giải pháp vé máy bay và hành trình dành cho công ty du học – xuất khẩu lao động</h2>
+          <div class="intro-copy">
+            <p>
+              Blue Sky & Silver Sky đồng hành cùng các công ty du học, xuất khẩu lao động và đơn vị đào tạo trong việc tổ chức hành trình bay cho thăm thân, cô dâu, học viên, thực tập sinh, kỹ sư, lao động và đoàn xuất cảnh theo kỳ.
+            </p>
+            <p>
+              Chúng tôi hỗ trợ từ khâu tư vấn vé, giữ chỗ, xuất vé, hành lý, đổi/hoàn, check-in online đến xử lý phát sinh trước ngày bay. Với các đoàn đông người, Blue Sky & Silver Sky có thể hỗ trợ theo danh sách đoàn, chia nhóm bay, tư vấn hành lý và cung cấp thông tin rõ ràng để doanh nghiệp dễ quản lý.
+            </p>
+          </div>
+
+          <div class="advantage-grid">
+            <article class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"></path></svg></div><h3>Giá cạnh tranh</h3><p>Phù hợp cả khách lẻ, đoàn nhập học và đoàn lao động xuất cảnh.</p></article>
+            <article class="card"><div class="icon" style="background: var(--blue);"><svg viewBox="0 0 24 24"><path d="M8 6h13"></path><path d="M8 12h13"></path><path d="M8 18h13"></path><path d="M3 6h.01"></path><path d="M3 12h.01"></path><path d="M3 18h.01"></path></svg></div><h3>Danh sách đoàn lớn</h3><p>Hỗ trợ giữ chỗ, cập nhật danh sách và xử lý thay đổi hành khách.</p></article>
+            <article class="card"><div class="icon" style="background: var(--green);"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 3v6h6"></path></svg></div><h3>Linh hoạt lịch bay</h3><p>Hỗ trợ thay đổi lịch bay, transit, hành lý và phát sinh trước giờ khởi hành.</p></article>
+          </div>
+        </div>
+
+        <aside class="ops-panel reveal-right" aria-label="Quy trình hỗ trợ xuất cảnh">
+          <div class="ops-head">
+            <b>Quy trình triển khai</b>
+            <span>BlueSky & SilverSky đồng hành cùng đối tác từ lúc tiếp nhận đến khi hoàn tất xuất cảnh</span>
+          </div>
+          <div class="ops-steps">
+            <div class="ops-step">
+              <div class="ops-num">01</div>
+              <div class="ops-body"><b>Tiếp nhận kế hoạch</b><span>Nhận lịch nhập học, lịch xuất cảnh, số lượng khách và điểm đến.</span></div>
+            </div>
+            <div class="ops-step">
+              <div class="ops-num">02</div>
+              <div class="ops-body"><b>Báo giá & tư vấn</b><span>Cập nhật giá theo thời gian thực, tư vấn hãng bay và điều kiện vé.</span></div>
+            </div>
+            <div class="ops-step">
+              <div class="ops-num">03</div>
+              <div class="ops-body"><b>Giữ chỗ & danh sách</b><span>Hỗ trợ giữ chỗ dài ngày theo kế hoạch đào tạo hoặc phái cử.</span></div>
+            </div>
+            <div class="ops-step">
+              <div class="ops-num">04</div>
+              <div class="ops-body"><b>Xuất cảnh & hỗ trợ</b><span>Hỗ trợ hành lý, transit, đổi vé và phát sinh trước/sau chuyến bay.</span></div>
+            </div>
+          </div>
+          <div class="market-strip">
+            <div class="market"><div class="market-window"><div class="market-scene scene-japan"></div><div class="market-frame"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616110725932_0hnmapflauivm_1200.webp" alt="" loading="lazy"></div><div class="market-label"><b>Nhật Bản</b><span>Du học, thực tập sinh, kỹ sư</span></div></div></div>
+            <div class="market"><div class="market-window"><div class="market-scene scene-korea"></div><div class="market-frame"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616110725932_0hnmapflauivm_1200.webp" alt="" loading="lazy"></div><div class="market-label"><b>Hàn Quốc</b><span>Du học, EPS, đoàn xuất cảnh</span></div></div></div>
+            <div class="market"><div class="market-window"><div class="market-scene scene-taiwan"></div><div class="market-frame"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616110725932_0hnmapflauivm_1200.webp" alt="" loading="lazy"></div><div class="market-label"><b>Đài Loan</b><span>Lao động, đoàn số lượng lớn</span></div></div></div>
+            <div class="market"><div class="market-window"><div class="market-scene scene-europe"></div><div class="market-frame"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616110725932_0hnmapflauivm_1200.webp" alt="" loading="lazy"></div><div class="market-label"><b>Châu Âu</b><span>Lao động dài hạn, kỹ sư</span></div></div></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="chinh-sach">
+      <div class="container">
+        <div class="section-head reveal" style="display: block;">
+          <div class="kicker">Chính sách hợp tác</div>
+          <h2>Chính sách dành cho công ty XKLĐ/Du học</h2>
+          <p class="lead" style="margin-top: 12px;">
+            Báo giá theo đoàn, theo kỳ bay và theo tình trạng chỗ thực tế.
+          </p>
+        </div>
+
+        <div class="policy-grid reveal">
+          <article class="policy-card highlight"><div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path></svg></div><h3>Giá tốt nhất thị trường</h3><p>Hỗ trợ giữ chỗ theo danh sách học viên/lao động.</p></article>
+          <article class="policy-card highlight"><div class="icon" style="background: var(--blue);"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><circle cx="7" cy="7" r="1"></circle></svg></div><h3>Tư vấn hành trình bay thuận tiện</h3><p>Tư vấn hành lý phù hợp từng hãng bay và từng thị trường.</p></article>
+          <article class="policy-card highlight"><div class="icon" style="background: var(--red);"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><h3>Tối đa hành lý mang theo</h3><p>Hỗ trợ chia nhóm bay nếu đoàn đông hoặc cần bay nhiều đợt.</p></article>
+          <article class="policy-card highlight"><div class="icon" style="background: var(--green);"><svg viewBox="0 0 24 24"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"></path></svg></div><h3>Chiết khấu đặc thù</h3><p>Chính sách chiết khấu đặc thù dành riêng cho khách du học, lao động, SOTO.</p></article>
+          <article class="policy-card"><div class="icon" style="background: var(--green);"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 3v6h6"></path></svg></div><h3>Đổi vé linh hoạt</h3><p>Hỗ trợ thay đổi ngày bay, đổi tên, hoàn vé theo điều kiện của hãng.</p></article>
+          <article class="policy-card"><div class="icon" style="background: var(--navy);"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></div><h3>Chứng từ & hóa đơn</h3><p>Hỗ trợ chứng từ booking, hóa đơn và thông tin thanh toán theo yêu cầu doanh nghiệp.</p></article>
+          <article class="policy-card"><div class="icon" style="background: var(--blue);"><svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path></svg></div><h3>Hỗ trợ phát sinh</h3><p>Có đầu mối hỗ trợ nhanh khi phát sinh thay đổi lịch visa, lịch nhập học, lịch xuất cảnh.</p></article>
+          <article class="policy-card"><div class="icon" style="background: var(--gold);"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><h3>Check-in online</h3><p>Hỗ trợ check-in online và hướng dẫn thông tin trước ngày bay.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-blue" id="du-hoc">
+      <div class="container">
+        <div class="section-head reveal" style="display: block;">
+          <div class="kicker">Sản phẩm</div>
+          <h2>Sản phẩm du học</h2>
+          <p class="lead" style="margin-top: 12px;">
+            Hỗ trợ vé máy bay cho du học sinh Hàn Quốc và Nhật Bản, kèm tư vấn hành lý, transit và thay đổi lịch bay.
+          </p>
+        </div>
+
+        <div class="reveal">
+          <article class="duhoc-card">
+            <div class="duhoc-card-head">
+              <div class="duhoc-plane"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5 0 1 .4 1.2L9 11l-2 2-3-.5c-.4-.1-.7.1-.9.4l-.2.4c-.2.5 0 1 .4 1.2l3.5 1.5 1.5 3.5c.2.4.7.6 1.2.4l.4-.2c.3-.2.5-.5.4-.9L10 15l2-2 2.6 5.2c.2.4.7.6 1.2.4l.5-.3c.4-.2.6-.6.5-1.1z"/></svg></div>
+              <span class="duhoc-card-title">Du học Hàn Quốc / Du học Nhật Bản</span>
+            </div>
+            <div class="duhoc-features">
+              <div class="duhoc-feat duhoc-feat--blue">
+                <div class="duhoc-feat-hero">
+                  <img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105706770_0hnmapflauiu5_orig.webp" alt="Hành lý sân bay" loading="lazy">
+                  <div class="duhoc-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20h12"/><path d="M6 14h12"/><rect x="5" y="3" width="14" height="11" rx="2"/><path d="M9 3v11"/><path d="M15 3v11"/></svg></div>
+                </div>
+                <div class="duhoc-feat-label">Tư vấn hành trình và hỗ trợ hành lý</div>
+              </div>
+              <div class="duhoc-feat duhoc-feat--teal">
+                <div class="duhoc-feat-hero">
+                  <img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105705984_0hnmapflauiu2_orig.webp" alt="Nhóm du học sinh" loading="lazy">
+                  <div class="duhoc-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                </div>
+                <div class="duhoc-feat-label">Giá đoàn cho nhóm từ 10 khách trở lên</div>
+              </div>
+              <div class="duhoc-feat duhoc-feat--gold">
+                <div class="duhoc-feat-hero">
+                  <img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105706549_0hnmapflauiu4_orig.webp" alt="Máy bay trên mây" loading="lazy">
+                  <div class="duhoc-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
+                </div>
+                <div class="duhoc-feat-label">Bay thẳng chiết khấu lên đến 35%</div>
+              </div>
+              <div class="duhoc-feat duhoc-feat--purple">
+                <div class="duhoc-feat-hero">
+                  <img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105706954_0hnmapflauiu6_orig.webp" alt="Boarding pass" loading="lazy">
+                  <div class="duhoc-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+                </div>
+                <div class="duhoc-feat-label">Chính sách đổi vé linh hoạt</div>
+              </div>
+              <div class="duhoc-feat duhoc-feat--green">
+                <div class="duhoc-feat-hero">
+                  <img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105702238_0hnmapflauito_orig.webp" alt="Cửa sổ máy bay" loading="lazy">
+                  <div class="duhoc-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+                </div>
+                <div class="duhoc-feat-label">Bay thẳng chiết khấu lên đến 55%</div>
+              </div>
+            </div>
+            <div class="duhoc-cta">
+              <a class="btn btn-primary" href="#lien-he">Tư vấn hành trình <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="xkld">
+      <div class="container">
+        <div class="section-head reveal" style="display: block;">
+          <div class="kicker">Sản phẩm</div>
+          <h2>Sản phẩm XKLĐ</h2>
+          <p class="lead" style="margin-top: 12px;">
+            Vé đoàn cho thực tập sinh, kỹ sư, lao động kỹ năng đặc định và đoàn xuất cảnh số lượng lớn.
+          </p>
+        </div>
+
+        <div class="tabs-wrap"><div class="tabs" role="tablist" aria-label="Thị trường xuất khẩu lao động">
+          <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-tab="europe-usa">Châu Âu & Mỹ</button>
+          <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="taiwan">Đài Loan</button>
+          <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="japan">Nhật Bản</button>
+          <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="korea">Hàn Quốc</button>
+        </div></div>
+
+        <div class="tab-panel active" id="europe-usa">
+          <div class="xkld-grid">
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105702526_0hnmapflauitp_orig.webp" alt="Châu Âu" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-blue"><svg viewBox="0 0 24 24"><path fill="white" stroke="none" d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.4-.1.9.3 1.1L11 12l-2 3H6l-1 1 3 2 2 3 1-1v-3l3-2 3.7 7.3c.2.4.7.5 1.1.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg></div><span>Vé máy bay đi Châu Âu: Đức, Ba Lan, Romania, Hungary, Czech...</span></div>
+            </div>
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105704331_0hnmapflauitt_orig.webp" alt="Mỹ" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-teal"><svg viewBox="0 0 24 24"><path fill="white" stroke="none" d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.4-.1.9.3 1.1L11 12l-2 3H6l-1 1 3 2 2 3 1-1v-3l3-2 3.7 7.3c.2.4.7.5 1.1.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg></div><span>Vé máy bay đi Mỹ: Los Angeles, San Francisco, New York, Houston, Dallas...</span></div>
+            </div>
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105705727_0hnmapflauiu1_orig.webp" alt="Sân bay" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-orange"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span>Hỗ trợ vé đoàn cho lao động kỹ thuật, điều dưỡng, nông nghiệp, du học, thăm thân và định cư</span></div>
+            </div>
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105706549_0hnmapflauiu4_orig.webp" alt="Transit" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-purple"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20"/><path d="M12 2a15 15 0 0 0 0 20"/></svg></div><span>Tư vấn hành trình transit tối ưu qua các hub lớn (Frankfurt, Istanbul, Dubai, Nhật, Hàn)</span></div>
+            </div>
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105702238_0hnmapflauito_orig.webp" alt="Hành lý" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-green"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div><span>Hỗ trợ hành lý ký gửi, điều kiện đổi/hoàn vé linh hoạt</span></div>
+            </div>
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105704625_0hnmapflauitu_orig.webp" alt="Lịch bay" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-navy"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span>Cập nhật lịch bay và phối hợp danh sách đoàn xuất cảnh</span></div>
+            </div>
+          </div>
+          <div class="xkld-cta"><a href="#lien-he">Tư vấn hành trình <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+        </div>
+
+        <div class="tab-panel" id="taiwan">
+          <div class="xkld-grid">
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105703035_0hnmapflauitq_orig.webp" alt="Đài Bắc" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-blue"><svg viewBox="0 0 24 24"><path fill="white" stroke="none" d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.4-.1.9.3 1.1L11 12l-2 3H6l-1 1 3 2 2 3 1-1v-3l3-2 3.7 7.3c.2.4.7.5 1.1.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg></div><span>Vé máy bay Việt Nam ⇄ Đài Bắc</span></div>
+            </div>
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105705131_0hnmapflauitv_orig.webp" alt="Cao Hùng" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-teal"><svg viewBox="0 0 24 24"><path fill="white" stroke="none" d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.4-.1.9.3 1.1L11 12l-2 3H6l-1 1 3 2 2 3 1-1v-3l3-2 3.7 7.3c.2.4.7.5 1.1.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg></div><span>Vé máy bay Việt Nam ⇄ Cao Hùng/Đài Trung tùy lịch khai thác</span></div>
+            </div>
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105705727_0hnmapflauiu1_orig.webp" alt="Sân bay" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-orange"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span>Vé đoàn cho lao động xuất cảnh</span></div>
+            </div>
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105702238_0hnmapflauito_orig.webp" alt="Hành lý" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-green"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div><span>Tư vấn hành lý ký gửi, hành lý xách tay, điều kiện đổi/hoàn</span></div>
+            </div>
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105704625_0hnmapflauitu_orig.webp" alt="Danh sách đoàn" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-purple"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><span>Hỗ trợ danh sách đoàn, chia nhóm bay và cập nhật thông tin chuyến</span></div>
+            </div>
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105706263_0hnmapflauiu3_orig.webp" alt="Chính sách giá vé" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-navy"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1" fill="white" stroke="none"/></svg></div><span>Chính sách giá vé tốt, linh hoạt — ưu đãi đặc biệt cho đoàn số lượng lớn, liên hệ để nhận báo giá tốt nhất</span></div>
+            </div>
+          </div>
+          <div class="xkld-cta"><a href="#lien-he">Tư vấn hành trình <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+        </div>
+
+        <div class="tab-panel" id="japan">
+          <div class="xkld-grid">
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105703847_0hnmapflauits_orig.webp" alt="Nhật Bản" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-orange"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span>Vé đoàn cho thực tập sinh, kỹ sư, lao động kỹ năng đặc định</span></div>
+            </div>
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105703581_0hnmapflauitr_orig.webp" alt="Tokyo" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-blue"><svg viewBox="0 0 24 24"><path fill="white" stroke="none" d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.4-.1.9.3 1.1L11 12l-2 3H6l-1 1 3 2 2 3 1-1v-3l3-2 3.7 7.3c.2.4.7.5 1.1.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg></div><span>Các chặng đến Tokyo, Osaka, Fukuoka, Nagoya và các khu vực lân cận</span></div>
+            </div>
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105704625_0hnmapflauitu_orig.webp" alt="Lịch bay" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-navy"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span>Tư vấn lịch bay phù hợp giờ đón của nghiệp đoàn/công ty tiếp nhận</span></div>
+            </div>
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105702238_0hnmapflauito_orig.webp" alt="Hành lý" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-green"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div><span>Hỗ trợ thông tin hành lý và điều kiện vé</span></div>
+            </div>
+          </div>
+          <div class="xkld-cta"><a href="#lien-he">Tư vấn hành trình <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+        </div>
+
+        <div class="tab-panel" id="korea">
+          <div class="xkld-grid">
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105705471_0hnmapflauiu0_orig.webp" alt="Seoul" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-blue"><svg viewBox="0 0 24 24"><path fill="white" stroke="none" d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.4-.1.9.3 1.1L11 12l-2 3H6l-1 1 3 2 2 3 1-1v-3l3-2 3.7 7.3c.2.4.7.5 1.1.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg></div><span>Vé đoàn đi Seoul/Incheon, Busan và các điểm đến phù hợp</span></div>
+            </div>
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105704625_0hnmapflauitu_orig.webp" alt="Lịch bay" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-navy"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span>Hỗ trợ lịch bay theo đợt xuất cảnh</span></div>
+            </div>
+            <div class="xkld-item">
+              <div class="xkld-thumb"><img src="https://file.evotech.vn/evo-retail/shops/61198645-e6b5-4aee-9410-86f516d5c73a/20260616105702238_0hnmapflauito_orig.webp" alt="Hành lý" loading="lazy"></div>
+              <div class="xkld-info"><div class="xkld-icon ic-green"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div><span>Tư vấn hành lý, check-in, đổi lịch khi có thay đổi từ phía tiếp nhận</span></div>
+            </div>
+          </div>
+          <div class="xkld-cta"><a href="#lien-he">Tư vấn hành trình <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-intro">
+      <div class="container">
+        <div class="section-head reveal" style="display: block;">
+          <div class="kicker">Dịch vụ bổ sung</div>
+          <h2>Các dịch vụ có thể đặt thêm</h2>
+        </div>
+        <div class="policy-grid reveal">
+          <article class="policy-card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div><h3>Xe đưa đón sân bay</h3><p>Xe đưa đón sân bay tại Việt Nam.</p></article>
+          <article class="policy-card"><div class="icon" style="background: var(--blue);"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"></path></svg></div><h3>Bảo hiểm du lịch</h3><p>Bảo hiểm du lịch/ngắn hạn nếu khách có nhu cầu.</p></article>
+          <article class="policy-card"><div class="icon" style="background: var(--green);"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></div><h3>Sim/Wifi quốc tế</h3><p>Sim/wifi quốc tế.</p></article>
+          <article class="policy-card"><div class="icon" style="background: var(--gold);"><svg viewBox="0 0 24 24"><path d="M6 19v-9a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v9"/><path d="M6 13h5"/><path d="M4 19h7"/><path d="M13 19v-9a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v9"/><path d="M13 13h5"/><path d="M11 19h9"/><path d="M3 5h18v2H3z"/></svg></div><h3>Chọn chỗ theo yêu cầu</h3><p>Hỗ trợ chọn chỗ ngồi theo yêu cầu của đoàn hoặc cá nhân.</p></article>
+          <article class="policy-card"><div class="icon" style="background: var(--navy);"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><h3>Dịch vụ đón tiễn sân bay VIP</h3><p>Dịch vụ đón tiễn VIP tại sân bay cho đoàn và khách hàng quan trọng.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-head reveal" style="display: block;">
+          <div class="kicker">Dịch vụ hỗ trợ</div>
+          <h2>Hỗ trợ hành khách trước chuyến bay</h2>
+        </div>
+        <div class="policy-grid reveal">
+          <article class="policy-card"><div class="icon" style="background: var(--gold);"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><h3>Hỗ trợ checkin online từ A-Z</h3><p>Hướng dẫn và hỗ trợ check-in online đầy đủ cho hành khách.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta" id="lien-he">
+      <div class="container cta-grid">
+        <div class="reveal-left">
+          <div class="kicker" style="color: var(--gold);">Liên hệ</div>
+          <h2>Đăng ký trở thành đối tác để nhận báo giá ưu đãi</h2>
+          <p>
+            Gửi thông tin thị trường, số lượng học viên/lao động, thời gian xuất cảnh dự kiến và nhu cầu giữ chỗ. BlueSky Travel và SilverSky sẽ tư vấn chính sách hợp tác riêng cho công ty Du học & Xuất khẩu lao động.
+          </p>
+          <div class="contact-list">
+            <div class="contact-item"><span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 11.19 19 19.5 19.5 0 0 1 5 12.81 19.86 19.86 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.6a2 2 0 0 1-.45 2.11L8 9.66a16 16 0 0 0 6.34 6.34l1.23-1.23a2 2 0 0 1 2.11-.45c.83.29 1.7.5 2.6.62A2 2 0 0 1 22 16.92z"></path></svg></span><div><b>Hotline</b><span>0934 654 656</span></div></div>
+            <div class="contact-item"><span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"></path><path d="m22 6-10 7L2 6"></path></svg></span><div><b>Email</b><span>sales@silversky.vn / phongve@blueskyvietnam.com</span></div></div>
+            <div class="contact-item"><span class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15 15 0 0 1 0 20"></path><path d="M12 2a15 15 0 0 0 0 20"></path></svg></span><div><b>Website</b><span>blueskyvietnam.com / silversky.vn</span></div></div>
+            <div class="contact-item"><span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path></svg></span><div><b>Group Zalo</b><span><a href="https://zalo.me/g/57lcapypguczxiaeff6o" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">Tham gia Group Zalo</a></span></div></div>
+          </div>
+        </div>
+
+        <form class="form reveal-right" id="contactForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="company">Tên công ty</label>
+              <input id="company" name="company" type="text" placeholder="Nhập tên công ty du học/XKLĐ">
+            </div>
+            <div class="field">
+              <label for="contact">Người liên hệ</label>
+              <input id="contact" name="contact" type="text" placeholder="Nhập họ tên">
+            </div>
+            <div class="field">
+              <label for="phone">Số điện thoại</label>
+              <input id="phone" name="phone" type="tel" placeholder="Nhập số điện thoại">
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="Nhập email">
+            </div>
+            <div class="field">
+              <label for="market">Thị trường chính</label>
+              <select id="market" name="market">
+                <option>Du học Hàn Quốc</option>
+                <option>Du học Nhật Bản</option>
+                <option>XKLĐ Đài Loan</option>
+                <option>XKLĐ Nhật Bản</option>
+                <option>XKLĐ Hàn Quốc</option>
+                <option>XKLĐ Châu Âu & Mỹ</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="volume">Sản lượng dự kiến</label>
+              <input id="volume" name="volume" type="text" placeholder="Ví dụ: 30 vé/tháng">
+            </div>
+            <div class="field full">
+              <label for="message">Thông tin cần báo giá</label>
+              <textarea id="message" name="message" placeholder="Ví dụ: Đoàn 25 thực tập sinh bay Hà Nội - Osaka, cần giữ chỗ theo lịch xuất cảnh tháng 8"></textarea>
+            </div>
+            <div class="field full">
+              <button class="btn btn-primary" type="submit" style="width:100%">Đăng ký nhận chính sách đối tác</button>
+              <p class="form-note" id="formNote">Biểu mẫu demo trên HTML thuần. Có thể nối với email, CRM hoặc Google Sheet ở bước sau.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>© 2026 Evotech. All rights reserved.</div>
+      <div>Du học | XKLĐ | Vé đoàn | Nhật Bản | Hàn Quốc | Đài Loan | Châu Âu</div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact Icons -->
+  <div class="floating-contact" aria-label="Liên hệ nhanh">
+    <a class="fc-btn fc-phone" href="tel:0934654656" aria-label="Gọi điện">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    </a>
+    <a class="fc-btn fc-zalo" href="https://zalo.me/g/57lcapypguczxiaeff6o" target="_blank" rel="noopener" aria-label="Chat Zalo">
+      <span class="fc-zalo-text">Zalo</span>
+    </a>
+    <a class="fc-btn fc-email" href="mailto:sales@silversky.vn" aria-label="Gửi Email">
+      <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 6-10 7L2 6"></path></svg>
+    </a>
+    <a class="fc-btn fc-web" href="https://blueskyvietnam.com" target="_blank" rel="noopener" aria-label="Website">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+    </a>
+  </div>
+
+  <button class="back-top" id="backTop" type="button" aria-label="Cuộn lên đầu trang">
+    <svg viewBox="0 0 24 24"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg>
+  </button>
+
+  <script>
+    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.getElementById("menuToggle");
+    const backTop = document.getElementById("backTop");
+    const contactForm = document.getElementById("contactForm");
+    const formNote = document.getElementById("formNote");
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabPanels = document.querySelectorAll(".tab-panel");
+    const header = document.querySelector(".header");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.classList.toggle("open", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const target = button.dataset.tab;
+
+        tabButtons.forEach((item) => { item.classList.remove("active"); item.setAttribute("aria-selected", "false"); });
+        tabPanels.forEach((panel) => panel.classList.remove("active"));
+
+        button.classList.add("active");
+        button.setAttribute("aria-selected", "true");
+        document.getElementById(target).classList.add("active");
+      });
+    });
+
+    let lastScrollY = window.scrollY;
+    window.addEventListener("scroll", () => {
+      const currentY = window.scrollY;
+      backTop.classList.toggle("show", currentY > 520);
+      header.classList.toggle("scrolled", currentY > 80);
+      if (currentY > 80) {
+        header.classList.toggle("header-hidden", currentY > lastScrollY);
+      } else {
+        header.classList.remove("header-hidden");
+      }
+      lastScrollY = currentY;
+    }, { passive: true });
+
+    backTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      formNote.textContent = "Đã ghi nhận yêu cầu demo. Ở bước triển khai thật, form này sẽ được nối với kênh nhận lead đối tác Du học & XKLĐ của bạn.";
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal, .reveal-left, .reveal-right").forEach((el) => {
+      revealObserver.observe(el);
+    });
+  </script>
+</body>
+</html>
