@@ -6,7 +6,31 @@
   <title>BlueSky Travel & SilverSky | Vé máy bay cho Du học & XKLĐ</title>
   <meta name="description" content="Giải pháp vé máy bay cho công ty du học, xuất khẩu lao động, trung tâm đào tạo ngoại ngữ và đơn vị phái cử lao động quốc tế.">
   <link rel="preload" as="image" href="banner.webp">
+  <link rel="preload" as="font" type="font/woff2" href="it-bold.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="it-regular.woff2" crossorigin>
   <style>
+    @font-face {
+      font-family: 'Inter Tight';
+      src: url('it-regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Inter Tight';
+      src: url('it-medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Inter Tight';
+      src: url('it-bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
     :root {
       --navy: #102a43;
       --blue: #1f7ae0;
@@ -35,7 +59,7 @@
     body {
       margin: 0;
       color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Inter Tight', Arial, Helvetica, sans-serif;
       background: var(--paper);
       line-height: 1.6;
     }
