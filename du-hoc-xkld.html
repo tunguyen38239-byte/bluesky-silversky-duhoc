@@ -2662,9 +2662,35 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    contactForm.addEventListener("submit", (event) => {
+    const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbyc8psuAHqBEfLBx_aWOmP7XkJJZjTg7wuexcxJJGJTfK0v0x8S8YkA4HvFcrt-8A_4/exec";
+    contactForm.addEventListener("submit", async (event) => {
       event.preventDefault();
-      formNote.textContent = "Đã ghi nhận yêu cầu demo. Ở bước triển khai thật, form này sẽ được nối với kênh nhận lead đối tác Du học & XKLĐ của bạn.";
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const company = contactForm.company.value.trim();
+      const phone = contactForm.phone.value.trim();
+      const email = contactForm.email.value.trim();
+      if (!company || (!phone && !email)) {
+        formNote.style.color = "#d85645";
+        formNote.textContent = "Vui lòng nhập Tên công ty và ít nhất Số điện thoại hoặc Email.";
+        return;
+      }
+      const original = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Đang gửi...";
+      formNote.style.color = "";
+      formNote.textContent = "Đang gửi thông tin...";
+      try {
+        await fetch(SHEET_ENDPOINT, { method: "POST", mode: "no-cors", body: new FormData(contactForm) });
+        contactForm.reset();
+        formNote.style.color = "#2f8f5b";
+        formNote.textContent = "Đã gửi thành công! Chúng tôi sẽ liên hệ báo giá sớm nhất.";
+      } catch (err) {
+        formNote.style.color = "#d85645";
+        formNote.textContent = "Gửi không thành công. Vui lòng gọi Hotline 0934 654 656 hoặc thử lại.";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = original;
+      }
     });
 
     const revealObserver = new IntersectionObserver((entries) => {
